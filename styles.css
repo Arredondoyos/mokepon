@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+
+.inicio {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('./assets/fondo_mokepon.png');
+    background-size: 140% auto; /* Ajusta la imagen para cubrir todo el ancho y ajustar la altura automáticamente */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+#seleccionar-mascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#seleccionar-mascota p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .titulo {
+    color: #ffda05; /* Color amarillo para destacar */
+    font-size: 60px; /* Aumenta el tamaño de la fuente */
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+}
+
+.subtitulo {
+    color: white;
+    font-size: 24px; /* Ajusta el tamaño de la fuente */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+}
+
+
+.tarjetas, .tarjetas-ataques{
+  display: flex;
+  gap: 10px;
+}
+
+.tarjeta-de-mokepon {
+    width: 190px;
+    height: 100px;
+    background: linear-gradient(135deg, #ffcb05, #ff7f00);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#ffe600, #d4d100), linear-gradient(to right, #f7a800, #f6f6f8);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.tarjeta-de-mokepon img {
+  width: 90px;
+}
+
+.tarjeta-de-mokepon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgb(255, 255, 255), 0 0 15px rgba(51, 51, 153, 0.5);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#ff8623, #ff7300), linear-gradient(to right, #f5f5f5, #e0ac00);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+
+#boton-mascota {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffcb05, #ff7f00);
+    border: 2px solid #11468F;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, border 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+}
+
+#boton-mascota:hover {
+    background: linear-gradient(135deg, #ff7f00, #ffcb05);
+    border: 2px solid #ff7f00;
+    transform: scale(1.05);
+}
+
+input {
+  display: none;
+}
+
+/* Contenedor de selección de ataque */
+#seleccionar-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos de los botones de ataque */
+.boton-de-ataque {
+    background-color: #11468f;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 180px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor de mensajes */
+#mensajes {
+    width: 280px;
+    background: #eee;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilos del botón de reiniciar */
+#boton-reiniciar {
+    border: 2px solid #11468f; /* Borde sólido */
+    color: #11468f;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent; /* Fondo transparente */
+    padding: 10px 20px; /* Ajuste del padding */
+    border-radius: 10px; /* Borde redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+#boton-reiniciar:hover {
+    background-color: #11468f; /* Cambia el color de fondo al pasar el cursor */
+    color: #fff; /* Cambia el color del texto al pasar el cursor */
+}
+
+#boton-fuego, #boton-agua, #boton-tierra {
+    background-color: #ffcb05; /* Fondo amarillo */
+    color: #11468f; /* Texto azul */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espaciado interno */
+    border: 2px solid transparent; /* Borde transparente */
+    border-radius: 10px; /* Borde redondeado */
+    cursor: pointer; /* Cursor al pasar el ratón */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
+    margin: 5px; /* Margen entre botones */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+#boton-fuego:hover, #boton-agua:hover, #boton-tierra:hover {
+    background-color: #ff7f00; /* Fondo naranja al pasar el ratón */
+    color: #fff; /* Texto blanco al pasar el ratón */
+    border-color: #11468f; /* Borde azul al pasar el ratón */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada al pasar el ratón */
+}
+
+/* Contenedor de las tarjetas de información */
+.ataques {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo para cada tarjeta individual */
+.tarjeta-jugador, .tarjeta-enemigo {
+    background-color: #f8f9fa; /* Fondo claro */
+    border: 3px solid #000000; /* Borde negro */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #000000; /* Color de texto negro */
+    font-family: 'Poppins', sans-serif; /* Fuente */
+}
+
+/* Estilo para los textos de vidas y nombres */
+#vidas-jugador, #vidas-enemigo {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff0000; /* Color rojo */
+    font-weight: bold;
+}
+
+#mascota-jugador, #mascota-enemigo {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000000; /* Color negro */
+    font-weight: bold;
+    text-align: center; /* Centrado */
+}
+
+#ataques-del-jugador, #ataques-del-enemigo {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 10px;
+    border: 2px solid #000000; /* Borde negro */
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 16px; /* Texto más pequeño */
+}
+
+@media(max-width:410px)
+{
+    .tarjetas,.tarjetas-ataques {
+        flex-direction:column
+    }
+}
+
+
+
+
+
+
